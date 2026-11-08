@@ -1,0 +1,4 @@
+#!/bin/sh
+# waybar custom/vol: prints the current level (re-run on signal RTMIN+8 from `vol`)
+v=$(amixer -c0 sget DAC | sed -n 's/.*Front Left: Playback \([0-9]*\).*/\1/p')
+[ "$v" -eq 0 ] && echo "🔇 mute" || echo "🔈 $(( (v - 192) / 2 ))dB"

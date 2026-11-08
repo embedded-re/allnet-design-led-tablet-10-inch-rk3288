@@ -1,0 +1,10 @@
+T0=53750
+Avr:      3284   334   1030   3442  |      61811   395   1361   5382
+Tot:             365   1196   4412
+T=78846
+8192.00 MiB transferred (1268.34 MiB/sec)
+8192.00 MiB transferred (3797.11 MiB/sec)
+    events per second:   181.63
+T=75000
+1008000
+4

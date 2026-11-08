@@ -1,0 +1,637 @@
+### date/uptime
+Sat Nov  7 22:35:19 CET 2026
+ 22:35:19 up 1 min,  0 users,  load average: 0.29, 0.13, 0.04
+### thermal
+58636
+55000
+### cpufreq
+1608000
+ondemand
+126000 9999
+216000 10
+312000 37
+408000 79
+600000 29
+696000 1
+816000 362
+1008000 33
+1200000 7
+1416000 0
+1512000 0
+1608000 483
+### gpu devfreq
+400000000
+### backlight
+brightness 200
+actual_brightness 200
+bl_power 0
+### pwm debugfs
+0: platform/ff680000.pwm, npwm: 1
+ pwm-0   (backlight           ): requested
+  requested configuration:  enabled, 7843/10000 ns, inverse polarity
+  actual configuration:     enabled, 7839/9994 ns, inverse polarity
+### dri state
+plane[35]: plane-0
+	crtc=crtc-0
+	fb=46
+		allocated by = [fbcon]
+		refcount=2
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=800x1280
+		layers:
+			size[0]=800x1280
+			pitch[0]=3200
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=00000000
+				size=4096000
+				imported=no
+	crtc-pos=800x1280+0+0
+	src-pos=800.000000x1280.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+	color-pipeline=0
+plane[37]: plane-1
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+	color-pipeline=0
+plane[40]: plane-2
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+	color-pipeline=0
+plane[42]: plane-3
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+	color-pipeline=0
+crtc[39]: crtc-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=1
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=1
+	connector_mask=1
+	encoder_mask=1
+	mode: "800x1280": 60 68000 800 820 840 860 1280 1310 1314 1322 0x48 0x0
+	background_color=ffff000000000000
+connector[45]: DSI-1
+	crtc=crtc-0
+	self_refresh_aware=0
+	interlace_allowed=0
+	ycbcr_420_allowed=0
+	max_requested_bpc=0
+	colorspace=Default
+plane[35]: plane-0
+	crtc=crtc-0
+	fb=46
+		allocated by = [fbcon]
+		refcount=2
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=800x1280
+		layers:
+			size[0]=800x1280
+			pitch[0]=3200
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=00000000
+				size=4096000
+				imported=no
+	crtc-pos=800x1280+0+0
+	src-pos=800.000000x1280.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+	color-pipeline=0
+plane[37]: plane-1
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+	color-pipeline=0
+plane[40]: plane-2
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+	color-pipeline=0
+plane[42]: plane-3
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+	color_mgmt_changed=0
+	color-pipeline=0
+crtc[39]: crtc-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=1
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=1
+	connector_mask=1
+	encoder_mask=1
+	mode: "800x1280": 60 68000 800 820 840 860 1280 1310 1314 1322 0x48 0x0
+	background_color=ffff000000000000
+connector[45]: DSI-1
+	crtc=crtc-0
+	self_refresh_aware=0
+	interlace_allowed=0
+	ycbcr_420_allowed=0
+	max_requested_bpc=0
+	colorspace=Default
+### clk_summary (display/pll/pwm/dsi/vop)
+ xin24m                              8       9        0        24000000    0          0     50000      Y   deviceless                      no_connection_id         
+    sclk_mipidsi_24m                 2       2        0        24000000    0          0     50000      Y      ff960000.dsi                    ref                      
+                                                                                                              dsi@ff960000                    no_connection_id         
+    sclk_lcdc_pwm1                   0       0        0        24000000    0          0     50000      N      deviceless                      no_connection_id         
+    sclk_lcdc_pwm0                   0       0        0        24000000    0          0     50000      N      deviceless                      no_connection_id         
+    sclk_uart4                       0       0        0        24000000    0          0     50000      Y      ff1c0000.serial                 baudclk                  
+    sclk_edp_24m                     0       1        0        24000000    0          0     50000      N      power-domain@9                  no_connection_id         
+    pll_npll                         0       0        0        500000000   0          0     50000      Y      deviceless                      no_connection_id         
+       npll                          0       0        0        500000000   0          0     50000      Y         deviceless                      no_connection_id         
+          mac_pll_src                0       0        0        41666667    0          0     50000      N            deviceless                      no_connection_id         
+    pll_gpll                         1       1        0        594000000   0          0     50000      Y      deviceless                      no_connection_id         
+       gpll                          6       7        0        594000000   0          0     50000      Y         deviceless                      no_connection_id         
+          dclk_vop1                  0       1        0        74250000    0          0     50000      N            power-domain@9                  no_connection_id         
+          gpll_aclk_cpu              1       1        0        594000000   0          0     50000      Y            deviceless                      no_connection_id         
+                      pclk_rkpwm     2       3        0        74250000    0          0     50000      Y                        ff680000.pwm                    no_connection_id         
+                      pclk_pwm       0       0        0        74250000    0          0     50000      N                        deviceless                      no_connection_id         
+          gpll_ddr                   0       0        0        594000000   0          0     50000      N            deviceless                      no_connection_id         
+          gpll_core                  1       1        0        594000000   0          0     50000      Y            deviceless                      no_connection_id         
+    pll_cpll                         1       1        0        400000000   0          0     50000      Y      deviceless                      no_connection_id         
+       cpll                          8       16       0        400000000   0          0     50000      Y         deviceless                      no_connection_id         
+                   sclk_uart2        1       1        0        1843200     0          0     50000      Y                     ff690000.serial                 baudclk                  
+                sclk_uart0           1       1        0        24000000    0          0     50000      Y                  ff180000.serial                 baudclk                  
+          dclk_vop0                  2       3        0        66666667    0          0     50000      Y            ff930000.vop                    dclk_vop                 
+                                                                                                                    vop@ff930000                    no_connection_id         
+          aclk_vio1                  2       4        0        400000000   0          0     50000      Y            deviceless                      no_connection_id         
+             hclk_vio                3       13       0        12500000    0          0     50000      Y               deviceless                      no_connection_id         
+                hclk_vop0            3       5        0        12500000    0          0     50000      Y                  ff930000.vop                    hclk_vop                 
+                                                                                                                          vop@ff930000                    no_connection_id         
+                hclk_vop1            0       1        0        12500000    0          0     50000      N                  power-domain@9                  no_connection_id         
+                hclk_vio_ahb_arbi    0       0        0        12500000    0          0     50000      Y                  deviceless                      no_connection_id         
+                hclk_vio_niu         1       1        0        12500000    0          0     50000      Y                  deviceless                      no_connection_id         
+                hclk_vio2_h2p        0       0        0        12500000    0          0     50000      Y                  deviceless                      no_connection_id         
+                pclk_mipi_dsi0       2       3        0        12500000    0          0     50000      Y                  ff960000.dsi                    pclk                     
+                                                                                                                          ff960000.dsi                    pclk                     
+                                                                                                                          dsi@ff960000                    no_connection_id         
+                pclk_mipi_dsi1       0       1        0        12500000    0          0     50000      N                  power-domain@9                  no_connection_id         
+                pclk_mipi_csi        0       1        0        12500000    0          0     50000      N                  power-domain@9                  no_connection_id         
+             aclk_vio1_niu           1       1        0        400000000   0          0     50000      Y               deviceless                      no_connection_id         
+             aclk_vop1               0       1        0        400000000   0          0     50000      N               power-domain@9                  no_connection_id         
+          aclk_vio0                  2       4        0        400000000   0          0     50000      Y            deviceless                      no_connection_id         
+             aclk_vio0_niu           1       1        0        400000000   0          0     50000      Y               deviceless                      no_connection_id         
+             aclk_vop0               3       5        0        400000000   0          0     50000      Y               ff930000.vop                    aclk_vop                 
+                                                                                                                       vop@ff930000                    no_connection_id         
+          cpll_aclk_cpu              0       0        0        400000000   0          0     50000      Y            deviceless                      no_connection_id         
+    pll_dpll                         0       0        0        396000000   0          0     50000      Y      deviceless                      no_connection_id         
+       dpll                          0       0        0        396000000   0          0     50000      Y         deviceless                      no_connection_id         
+          dpll_ddr                   0       0        0        396000000   0          0     50000      Y            deviceless                      no_connection_id         
+    pll_apll                         0       0        0        816000000   0          0     50000      Y      deviceless                      no_connection_id         
+       apll                          0       0        0        816000000   0          0     50000      Y         deviceless                      no_connection_id         
+          apll_core                  0       0        0        816000000   0          0     50000      Y            deviceless                      no_connection_id         
+### regulator_summary
+ regulator                      use open bypass  opmode voltage current     min     max
+---------------------------------------------------------------------------------------
+ regulator-dummy                 14   14      0 unknown     0mV     0mA     0mV     0mV 
+    4-0014-VDDIO                  1                                 0mA     0mV     0mV
+    audio-amplifier-VCC           0                                 0mA     0mV     0mV
+    serial0-0-vddio               1                                 0mA     0mV     0mV
+    serial0-0-vbat                1                                 0mA     0mV     0mV
+    2-0010-pvdd                   1                                 0mA     0mV     0mV
+    2-0010-dvdd                   1                                 0mA     0mV     0mV
+    2-0010-cpvdd                  1                                 0mA     0mV     0mV
+    2-0010-avdd                   1                                 0mA     0mV     0mV
+    1-0018-vddio                  1                                 0mA     0mV     0mV
+    1-0018-vdd                    1                                 0mA     0mV     0mV
+    ff580000.usb-vusb_a           1                                 0mA     0mV     0mV
+    ff580000.usb-vusb_d           1                                 0mA     0mV     0mV
+    ff540000.usb-vusb_a           1                                 0mA     0mV     0mV
+    ff540000.usb-vusb_d           1                                 0mA     0mV     0mV
+ vcc_sys                         13   12      0 unknown  5000mV     0mA  5000mV  5000mV 
+    vcc_otg_5v                    1    0      0 unknown  5000mV     0mA  5000mV  5000mV 
+    vdd_gpu                       2    1      0  normal  1100mV     0mA   850mV  1350mV 
+       ffa30000.gpu-mali          1                                 0mA  1100mV  1100mV
+    vdd_cpu                       2    1      0  normal  1350mV     0mA   850mV  1350mV 
+       cpu0-cpu0                  1                                 0mA  1350mV  1350mV
+    vcc_ddr                       1    0      0 standby  1200mV     0mA  1200mV  1200mV 
+    vcc_io                        5    5      0 standby  3300mV     0mA  3300mV  3300mV 
+       ff0f0000.mmc-vmmc          1                                 0mA  3300mV  3400mV
+       ff0d0000.mmc-vmmc          1                                 0mA  3300mV  3400mV
+       vcc_phy                    2    1      0 unknown  3300mV     0mA  3300mV  3300mV 
+          ff290000.ethernet-phy   1                                 0mA     0mV     0mV
+       vcc_lcd                    2    2      0 unknown  3300mV     0mA  3300mV  3300mV 
+          ff960000.dsi.0-vccio    1                                 0mA     0mV     0mV
+          ff960000.dsi.0-vdd      1                                 0mA     0mV     0mV
+       vcc_sd                     0    1      0 unknown  3300mV     0mA  3300mV  3300mV 
+          ff0c0000.mmc-vmmc       0                                 0mA  3300mV  3400mV
+    vdd_log                       1    0      0 standby  1150mV     0mA  1150mV  1150mV 
+    vcc_20                        4    3      0  normal  2000mV     0mA  2000mV  2000mV 
+       vdd_10                     1    0      0 unknown  1000mV     0mA  1000mV  1000mV 
+       vcc_18                     4    4      0 unknown  1800mV     0mA  1800mV  1800mV 
+          ff770000.syscon:io-domains-wifi   0                                 0mA     0mV     0mV
+          ff0f0000.mmc-vqmmc      1                                 0mA     0mV     0mV
+          ff100000.saradc-vref    1                                 0mA     0mV     0mV
+          ff0d0000.mmc-vqmmc      1                                 0mA     0mV     0mV
+       vcc18_lcd                  1    0      0 unknown  1800mV     0mA  1800mV  1800mV 
+    vccio_sd                      1    2      0  normal  3300mV     0mA  1800mV  3300mV 
+       ff0c0000.mmc-vqmmc         0                                 0mA     0mV     0mV
+       ff770000.syscon:io-domains-sdcard   0                                 0mA     0mV     0mV
+    vdd10_lcd                     1    0      0  normal  1000mV     0mA  1000mV  1000mV 
+    vcca_codec                    1    0      0  normal  3300mV     0mA  3300mV  3300mV 
+    vcca_tp                       2    1      0 unknown  3300mV     0mA  3300mV  3300mV 
+       4-0014-AVDD28              1                                 0mA     0mV     0mV
+    vccio_pmu                     1    0      0 unknown  3300mV     0mA  3300mV  3300mV 
+### PWM0 0xff680000
+0xff680000 0x000000FA
+0xff680004 0x000002E6
+0xff680008 0x00000246
+0xff68000c 0x00000013
+### DSI0 0xff960000
+0xff960000 0x3133302A
+0xff960004 0x00000001
+0xff960008 0x00000004
+0xff96000c 0x00000000
+0xff960010 0x00000005
+0xff960014 0x00000000
+0xff960018 0x00100004
+0xff96001c 0x00000000
+0xff960020 0x00000000
+0xff960024 0x00000000
+0xff960028 0x00000000
+0xff96002c 0x0000001D
+0xff960030 0x00000000
+0xff960034 0x00000000
+0xff960038 0x00003F02
+0xff96003c 0x00000320
+0xff960040 0x00000000
+0xff960044 0x00000000
+0xff960048 0x00000013
+0xff96004c 0x00000013
+0xff960050 0x0000032D
+0xff960054 0x00000004
+0xff960058 0x00000008
+0xff96005c 0x0000001E
+0xff960060 0x00000500
+0xff960064 0x00000000
+0xff960068 0x010F7F00
+0xff96006c 0x00002905
+0xff960070 0x00000000
+0xff960074 0x00000015
+0xff960078 0x00000000
+0xff96007c 0x00000000
+0xff960080 0x00000000
+0xff960084 0x00000000
+0xff960088 0x00000000
+0xff96008c 0x00000D00
+0xff960090 0x00000000
+0xff960094 0x00000001
+0xff960098 0x0024004F
+0xff96009c 0x183F2710
+0xff9600a0 0x0000000F
+0xff9600a4 0x00002003
+0xff9600a8 0x00000000
+0xff9600ac 0x00000000
+0xff9600b0 0x00001529
+0xff9600b4 0x00000002
+0xff9600b8 0x00002727
+0xff9600bc 0x00000000
+0xff9600c0 0x00000880
+0xff9600c4 0x00000000
+0xff9600c8 0x00000000
+0xff9600cc 0x00000000
+0xff9600d0 0x00000000
+0xff9600d4 0x00000000
+### VOPB 0xff930000
+0xff930000 0x00000000
+0xff930004 0x0A050A01
+0xff930008 0x00809000
+0xff93000c 0x00000000
+0xff930010 0x00000000
+0xff930014 0x0000E400
+0xff930018 0x00000000
+0xff93001c 0x00711C08
+0xff930020 0x0050C020
+0xff930024 0x00000000
+0xff930028 0x00000001
+0xff93002c 0x00000000
+0xff930030 0x00000081
+0xff930034 0x00400000
+0xff930038 0x00000000
+0xff93003c 0x01400320
+0xff930040 0x00000000
+0xff930044 0x00000000
+0xff930048 0x04FF031F
+0xff93004c 0x04FF031F
+0xff930050 0x000C0028
+0xff930054 0x10001000
+0xff930058 0x10001000
+0xff93005c 0x00000000
+0xff930060 0x00000000
+0xff930064 0x00000000
+0xff930068 0x00000000
+0xff93006c 0x00000000
+0xff930070 0x00000040
+0xff930074 0x00000000
+0xff930078 0x00000000
+0xff93007c 0x01400140
+0xff930080 0x00000000
+0xff930084 0x00000000
+0xff930088 0x00EF013F
+0xff93008c 0x00EF013F
+0xff930090 0x000A000A
+0xff930094 0x10001000
+0xff930098 0x10001000
+0xff93009c 0x00000000
+0xff9300a0 0x00000000
+0xff9300a4 0x00000000
+0xff9300a8 0x00000000
+0xff9300ac 0x00000000
+0xff9300b0 0x00000001
+0xff9300b4 0x00000000
+0xff9300b8 0x01400140
+0xff9300bc 0x01400140
+0xff9300c0 0x00000000
+0xff9300c4 0x00EF013F
+0xff9300c8 0x000A000A
+0xff9300cc 0x00000000
+0xff9300d0 0x00000000
+0xff9300d4 0x00EF013F
+0xff9300d8 0x000A000A
+0xff9300dc 0x00000000
+0xff9300e0 0x00000000
+0xff9300e4 0x00EF013F
+0xff9300e8 0x000A000A
+0xff9300ec 0x00000000
+0xff9300f0 0x00000000
+0xff9300f4 0x00EF013F
+0xff9300f8 0x000A000A
+0xff9300fc 0x00000000
+0xff930100 0x00000001
+0xff930104 0x00000000
+0xff930108 0x01400140
+0xff93010c 0x01400140
+0xff930110 0x00000000
+0xff930114 0x00EF013F
+0xff930118 0x000A000A
+0xff93011c 0x00000000
+0xff930120 0x00000000
+0xff930124 0x00EF013F
+0xff930128 0x000A000A
+0xff93012c 0x00000000
+0xff930130 0x00000000
+0xff930134 0x00EF013F
+0xff930138 0x000A000A
+0xff93013c 0x00000000
+0xff930140 0x00000000
+0xff930144 0x00EF013F
+0xff930148 0x000A000A
+0xff93014c 0x00000000
+0xff930150 0x00000000
+0xff930154 0x00000000
+0xff930158 0x00000000
+0xff93015c 0x000A000A
+0xff930160 0x00000000
+0xff930164 0x00000000
+0xff930168 0x00000000
+0xff93016c 0x00000000
+0xff930170 0x00280348
+0xff930174 0x000C050C
+0xff930178 0x10001000
+0xff93017c 0x00000000
+0xff930180 0x00000000
+0xff930184 0x000A00FA
+0xff930188 0x035C0014
+0xff93018c 0x00280348
+0xff930190 0x052A0004
+0xff930194 0x000C050C
+0xff930198 0x00000000
+0xff93019c 0x00000000
+0xff9301a0 0x0000200A
+0xff9301a4 0x00000000
+0xff9301a8 0x00000000
+0xff9301ac 0x00000000
+0xff9301b0 0x00000000
+0xff9301b4 0xD0010000
+0xff9301b8 0x01000000
+0xff9301bc 0x00000000
+0xff9301c0 0x00000000
+0xff9301c4 0x00000000
+0xff9301c8 0x15110903
+0xff9301cc 0x00030911
+0xff9301d0 0x1A150B04
+0xff9301d4 0x00040B15
+0xff9301d8 0x15110903
+0xff9301dc 0x00030911
+0xff9301e0 0x12844821
+0xff9301e4 0x21488412
+0xff9301e8 0xA55A9696
+0xff9301ec 0x5AA56969
+0xff9301f0 0xDEB77BED
+0xff9301f4 0xED7BB7DE
+0xff9301f8 0x00000000
+0xff9301fc 0x00000000
+### VOPL 0xff940000
+0xff940000 0x00000000
+0xff940004 0x00000000
+0xff940008 0x00000000
+0xff94000c 0x00000000
+0xff940010 0x00000000
+0xff940014 0x00000000
+0xff940018 0x00000000
+0xff94001c 0x00000000
+0xff940020 0x00000000
+0xff940024 0x00000000
+0xff940028 0x00000000
+0xff94002c 0x00000000
+0xff940030 0x00000000
+0xff940034 0x00000000
+0xff940038 0x00000000
+0xff94003c 0x00000000
+0xff940040 0x00000000
+0xff940044 0x00000000
+0xff940048 0x00000000
+0xff94004c 0x00000000
+0xff940050 0x00000000
+0xff940054 0x00000000
+0xff940058 0x00000000
+0xff94005c 0x00000000
+0xff940060 0x00000000
+0xff940064 0x00000000
+0xff940068 0x00000000
+0xff94006c 0x00000000
+0xff940070 0x00000000
+0xff940074 0x00000000
+0xff940078 0x00000000
+0xff94007c 0x00000000
+0xff940080 0x00000000
+0xff940084 0x00000000
+0xff940088 0x00000000
+0xff94008c 0x00000000
+0xff940090 0x00000000
+0xff940094 0x00000000
+0xff940098 0x00000000
+0xff94009c 0x00000000
+0xff9400a0 0x00000000
+0xff9400a4 0x00000000
+0xff9400a8 0x00000000
+0xff9400ac 0x00000000
+0xff9400b0 0x00000000
+0xff9400b4 0x00000000
+0xff9400b8 0x00000000
+0xff9400bc 0x00000000
+0xff9400c0 0x00000000
+0xff9400c4 0x00000000
+0xff9400c8 0x00000000
+0xff9400cc 0x00000000
+0xff9400d0 0x00000000
+0xff9400d4 0x00000000
+0xff9400d8 0x00000000
+0xff9400dc 0x00000000
+0xff9400e0 0x00000000
+0xff9400e4 0x00000000
+0xff9400e8 0x00000000
+0xff9400ec 0x00000000
+0xff9400f0 0x00000000
+0xff9400f4 0x00000000
+0xff9400f8 0x00000000
+0xff9400fc 0x00000000
+0xff940100 0x00000000
+0xff940104 0x00000000
+0xff940108 0x00000000
+0xff94010c 0x00000000
+0xff940110 0x00000000
+0xff940114 0x00000000
+0xff940118 0x00000000
+0xff94011c 0x00000000
+0xff940120 0x00000000
+0xff940124 0x00000000
+0xff940128 0x00000000
+0xff94012c 0x00000000
+0xff940130 0x00000000
+0xff940134 0x00000000
+0xff940138 0x00000000
+0xff94013c 0x00000000
+0xff940140 0x00000000
+0xff940144 0x00000000
+0xff940148 0x00000000
+0xff94014c 0x00000000
+0xff940150 0x00000000
+0xff940154 0x00000000
+0xff940158 0x00000000
+0xff94015c 0x00000000
+0xff940160 0x00000000
+0xff940164 0x00000000
+0xff940168 0x00000000
+0xff94016c 0x00000000
+0xff940170 0x00000000
+0xff940174 0x00000000
+0xff940178 0x00000000
+0xff94017c 0x00000000
+0xff940180 0x00000000
+0xff940184 0x00000000
+0xff940188 0x00000000
+0xff94018c 0x00000000
+0xff940190 0x00000000
+0xff940194 0x00000000
+0xff940198 0x00000000
+0xff94019c 0x00000000
+0xff9401a0 0x00000000
+0xff9401a4 0x00000000
+0xff9401a8 0x00000000
+0xff9401ac 0x00000000
+0xff9401b0 0x00000000
+0xff9401b4 0x00000000
+0xff9401b8 0x00000000
+0xff9401bc 0x00000000
+0xff9401c0 0x00000000
+0xff9401c4 0x00000000
+0xff9401c8 0x00000000
+0xff9401cc 0x00000000
+0xff9401d0 0x00000000
+0xff9401d4 0x00000000
+0xff9401d8 0x00000000
+0xff9401dc 0x00000000
+0xff9401e0 0x00000000
+0xff9401e4 0x00000000
+0xff9401e8 0x00000000
+0xff9401ec 0x00000000
+0xff9401f0 0x00000000
+0xff9401f4 0x00000000
+0xff9401f8 0x00000000
+0xff9401fc 0x00000000
+### GRF SOC_CON6/CON14/CON15 (dsi/lvds sel)
+0xff77025c 0x00008000
+0xff77027c 0x00000000
+0xff770280 0x00000000
+### interrupts
+  45:       6512          0          0          0  GIC-0   47 Level     ff930300.iommu, ff930000.vop
+  64:       1095          0          0          0  GIC-0   59 Level     eth0
+  65:          0          0          0          0  GIC-0   60 Level     eth0
+### dmesg drm/dsi/panel
+[    0.324713] /dsi@ff960000: Fixed dependency cycle(s) with /vop@ff930000
+[    0.331923] /vop@ff930000: Fixed dependency cycle(s) with /dsi@ff960000
+[    0.339150] /dsi@ff960000/panel@0: Fixed dependency cycle(s) with /dsi@ff960000
+[    0.347140] /dsi@ff960000: Fixed dependency cycle(s) with /dsi@ff960000/panel@0
+[    1.012217] platform ff930000.vop: Adding to iommu group 0
+[    1.517145] rockchip-drm display-subsystem: bound ff930000.vop (ops 0xc1782a8c)
+[    1.517339] rockchip-drm display-subsystem: bound ff960000.dsi (ops 0xc17879e8)
+[    1.517480] rockchip-drm display-subsystem: [drm] [PLANE:35:plane-0] pixel format with alpha exposed but blend mode not setup. Please fix.
+[    1.517501] rockchip-drm display-subsystem: [drm] [PLANE:37:plane-1] pixel format with alpha exposed but blend mode not setup. Please fix.
+[    1.517515] rockchip-drm display-subsystem: [drm] [PLANE:40:plane-2] pixel format with alpha exposed but blend mode not setup. Please fix.
+[    1.517528] rockchip-drm display-subsystem: [drm] [PLANE:42:plane-3] pixel format with alpha exposed but blend mode not setup. Please fix.
+[    1.519747] [drm] Initialized rockchip 1.0.0 for display-subsystem on minor 0
+[    1.957078] rockchip-drm display-subsystem: [drm] fb0: rockchipdrmfb frame buffer device
+[    6.251944] [drm] Initialized panfrost 1.6.0 for ffa30000.gpu on minor 1

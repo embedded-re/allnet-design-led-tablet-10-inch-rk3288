@@ -1,0 +1,36 @@
+cooled to 58181 after 300 s
+idle: cpu=58181 gpu=57272
+t=10s cpu=75C gpu=71C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=20s cpu=76C gpu=70C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=30s cpu=80C gpu=76C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=40s cpu=80C gpu=75C f=1704 gpuf=400 cpucool=1 gpucool=1
+t=50s cpu=78C gpu=76C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=60s cpu=78C gpu=75C f=1704 gpuf=300 cpucool=2 gpucool=2
+t=70s cpu=80C gpu=80C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=80s cpu=81C gpu=74C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=91s cpu=81C gpu=75C f=1704 gpuf=400 cpucool=1 gpucool=1
+t=101s cpu=82C gpu=78C f=1608 gpuf=300 cpucool=2 gpucool=1
+t=111s cpu=82C gpu=80C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=121s cpu=83C gpu=79C f=1608 gpuf=400 cpucool=1 gpucool=1
+t=131s cpu=80C gpu=78C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=141s cpu=84C gpu=77C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=151s cpu=84C gpu=79C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=161s cpu=79C gpu=78C f=1416 gpuf=200 cpucool=4 gpucool=3
+t=171s cpu=82C gpu=76C f=1416 gpuf=200 cpucool=4 gpucool=3
+t=182s cpu=81C gpu=79C f=1512 gpuf=300 cpucool=3 gpucool=2
+t=192s cpu=83C gpu=80C f=1512 gpuf=300 cpucool=3 gpucool=2
+t=202s cpu=85C gpu=82C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=212s cpu=83C gpu=80C f=1512 gpuf=300 cpucool=3 gpucool=2
+t=222s cpu=84C gpu=81C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=232s cpu=81C gpu=78C f=1416 gpuf=200 cpucool=4 gpucool=3
+t=242s cpu=84C gpu=81C f=1512 gpuf=200 cpucool=3 gpucool=2
+t=252s cpu=82C gpu=80C f=1704 gpuf=400 cpucool=1 gpucool=1
+t=262s cpu=83C gpu=79C f=1200 gpuf=200 cpucool=5 gpucool=3
+t=273s cpu=81C gpu=78C f=1416 gpuf=200 cpucool=4 gpucool=3
+t=283s cpu=85C gpu=80C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=293s cpu=85C gpu=81C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=303s cpu=80C gpu=80C f=1704 gpuf=400 cpucool=1 gpucool=1
+stress-ng: metrc: [1897] cpu              362780    300.02   1131.05      1.09      1209.21         320.44
+passed: 4: cpu (4)
+failed: 0
+max cpu temp: 85C  avg cpu freq: 1613 MHz  avg gpu freq: 346 MHz  policy: step_wise

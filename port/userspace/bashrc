@@ -1,0 +1,6 @@
+# /root/.bashrc
+[ -z "$PS1" ] && return
+[ -f /etc/profile.d/30-smarttab.sh ] && . /etc/profile.d/30-smarttab.sh
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+HISTSIZE=5000; HISTFILESIZE=10000; HISTCONTROL=ignoreboth; shopt -s histappend checkwinsize
+PS1='\[\e[1;31m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ '

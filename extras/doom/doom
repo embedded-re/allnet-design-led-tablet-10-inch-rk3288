@@ -1,0 +1,7 @@
+#!/bin/sh
+# doom — doomgeneric (SDL2, fullscreen 640x400 -> 1280x800) with the shareware IWAD.
+# Inside the GUI: Apps -> Doom, or `gui run doom` over ssh. Config/saves: current dir (default.cfg).
+# Music: SDL_mixer -> FluidSynth with the TimGM6mb General-MIDI SoundFont.
+export SDL_SOUNDFONTS=/usr/share/soundfonts/TimGM6mb.sf2
+cd "$HOME" 2>/dev/null
+exec /usr/local/lib/doom/doomgeneric -iwad /usr/share/games/doom/doom1.wad "$@"

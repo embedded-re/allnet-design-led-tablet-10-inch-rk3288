@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- /etc/xdg/labwc/rc.xml — smarttab (started by `gui start`) -->
+<labwc_config>
+  <core><gap>0</gap></core>
+  <theme>
+    <cornerRadius>6</cornerRadius>
+    <font place="ActiveWindow" name="DejaVu Sans" size="11" />
+    <font place="InactiveWindow" name="DejaVu Sans" size="11" />
+    <font place="MenuItem" name="DejaVu Sans" size="13" />
+  </theme>
+  <placement><policy>center</policy></placement>
+  <keyboard>
+    <default />
+    <keybind key="W-Return"><action name="Execute" command="foot" /></keybind>
+    <keybind key="W-d"><action name="Execute" command="fuzzel" /></keybind>
+    <!-- tablet Vol+/Vol- buttons (adc-keys) and keyboard media keys: 6 dB steps via `vol` -->
+    <keybind key="XF86AudioRaiseVolume"><action name="Execute" command="vol up" /></keybind>
+    <keybind key="XF86AudioLowerVolume"><action name="Execute" command="vol down" /></keybind>
+    <keybind key="XF86AudioMute"><action name="Execute" command="vol mute" /></keybind>
+  </keyboard>
+  <!-- bind the touchscreen to the panel so touch follows the output transform -->
+  <touch>
+    <deviceName>Goodix Capacitive TouchScreen</deviceName>
+    <mapToOutput>DSI-1</mapToOutput>
+    <mouseEmulation>no</mouseEmulation>
+  </touch>
+  <libinput>
+    <device category="default"><tap>yes</tap><naturalScroll>no</naturalScroll></device>
+  </libinput>
+  <!-- small screen: open every normal window maximized -->
+  <windowRules>
+    <windowRule identifier="*" type="normal"><action name="Maximize" /></windowRule>
+  </windowRules>
+</labwc_config>

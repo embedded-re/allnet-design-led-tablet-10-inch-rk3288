@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- desktop long-press / right-click menu -->
+<openbox_menu>
+  <menu id="root-menu">
+    <item label="Apps"><action name="Execute" command="fuzzel" /></item>
+    <item label="Terminal"><action name="Execute" command="foot" /></item>
+    <item label="Web browser"><action name="Execute" command="firefox" /></item>
+    <item label="Monitor (btop)"><action name="Execute" command="foot btop" /></item>
+    <separator />
+    <item label="Reconfigure"><action name="Reconfigure" /></item>
+    <item label="Exit GUI"><action name="Exit" /></item>
+  </menu>
+</openbox_menu>

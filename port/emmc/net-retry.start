@@ -1,0 +1,12 @@
+#!/bin/sh
+# /etc/local.d/net-retry.start — eth0 ifup sometimes fails with a stmmac DMA-reset timeout
+# (PHY RX clock not stable yet). Retry until we have an IPv4 address, then print the serial marker.
+has_ip() { ip -4 -o addr show eth0 2>/dev/null | grep -q inet; }
+for i in 1 2 3 4 5 6; do
+    has_ip && break
+    for t in 1 2 3 4 5; do sleep 1; has_ip && break 2; done   # give udhcpc a moment
+    echo "net-retry: eth0 has no address, attempt $i" > /dev/kmsg
+    ifdown -f eth0 >/dev/null 2>&1; ip link set eth0 down; sleep 1
+    ifup -f eth0 >/dev/null 2>&1
+done
+echo "rcS: up. IP: $(ip -4 -o addr show eth0 | awk '{print $4}') (emmc)" > /dev/ttyS2

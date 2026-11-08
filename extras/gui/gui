@@ -1,0 +1,67 @@
+#!/bin/sh
+# gui — start/stop the graphical stack by hand. Nothing here runs at boot.
+#   gui start [labwc|desktop|kiosk] [--rotate 0|90|180|270] [-- CMD...]
+#       labwc   = default: labwc + waybar + fuzzel launcher + wvkbd on-screen keyboard
+#       desktop = Weston desktop-shell, kiosk = Weston kiosk-shell (CMD fullscreen)
+#   gui stop | gui status | gui log | gui run CMD...
+# Input devices must be plugged in BEFORE start (libudev-zero, no hotplug helper).
+RUN=/run/gui; LOG=/var/log/gui.log; WCONF=/etc/xdg/weston/weston.ini
+GUI_ROTATE=90; GUI_SHELL=labwc
+[ -f /etc/gui.conf ] && . /etc/gui.conf
+export XDG_RUNTIME_DIR=$RUN
+export LANG=${LANG:-C.UTF-8}   # foot refuses non-UTF-8 locales
+pid_alive(){ [ -f "$1" ] && kill -0 "$(cat "$1")" 2>/dev/null; }
+display(){ for s in $RUN/wayland-*; do case $s in *.lock) ;; *) [ -S "$s" ] && { basename "$s"; return; };; esac; done; }
+
+start() {
+  shell=$GUI_SHELL; rot=$GUI_ROTATE
+  while [ $# -gt 0 ]; do case "$1" in
+    labwc|desktop|kiosk) shell=$1;; --rotate) rot=$2; shift;; --) shift; break;; *) echo "bad arg $1"; exit 2;; esac; shift; done
+  pid_alive $RUN/comp.pid && { echo "already running"; exit 1; }
+  case $rot in 0) tr=normal;; 90|180|270) tr=rotate-$rot;; *) echo "rotate: 0|90|180|270"; exit 2;; esac
+  mkdir -p $RUN; chmod 700 $RUN
+  if ! pid_alive $RUN/seatd.pid; then
+    seatd -g video -l error >>$LOG 2>&1 & echo $! > $RUN/seatd.pid
+    for i in 1 2 3 4 5 6 7 8 9 10; do [ -S /run/seatd.sock ] && break; sleep 0.2; done
+  fi
+  export LIBSEAT_BACKEND=seatd
+  echo "=== $(date) gui start $shell rot=$rot" >> $LOG
+  case $shell in
+    # session D-Bus only for the GUI's lifetime (waybar/GTK and firefox need one)
+    labwc) GUI_ROTATE=$rot dbus-run-session labwc >>$LOG 2>&1 & ;;
+    *) sed "s/^transform=.*/transform=$tr/" $WCONF > $RUN/weston.ini
+       weston --backend=drm --shell=$shell --config=$RUN/weston.ini --log=$LOG >/dev/null 2>&1 & ;;
+  esac
+  echo $! > $RUN/comp.pid
+  for i in $(seq 1 50); do [ -n "$(display)" ] && break; sleep 0.2; done
+  d=$(display)
+  if ! pid_alive $RUN/comp.pid || [ -z "$d" ]; then echo "compositor failed, see: gui log"; stop >/dev/null; exit 1; fi
+  echo "$d" > $RUN/display
+  echo "$shell up (rotate $rot), WAYLAND_DISPLAY=$d XDG_RUNTIME_DIR=$RUN"
+  if [ $# -gt 0 ]; then WAYLAND_DISPLAY=$d "$@" >>$LOG 2>&1 & echo "started: $*"; fi
+}
+
+stop() {
+  for p in comp seatd; do
+    if pid_alive $RUN/$p.pid; then pkill -TERM -P "$(cat $RUN/$p.pid)" 2>/dev/null; kill "$(cat $RUN/$p.pid)"; for i in 1 2 3 4 5 6 7 8 9 10; do pid_alive $RUN/$p.pid || break; sleep 0.3; done
+      pid_alive $RUN/$p.pid && kill -9 "$(cat $RUN/$p.pid)"; fi
+    rm -f $RUN/$p.pid
+  done
+  # session helpers that may outlive the compositor (started from autostart / gui run)
+  for p in waybar wvkbd-mobintl swaybg firefox wireplumber pipewire-pulse pipewire; do pkill -TERM -x $p 2>/dev/null; done
+  sleep 0.5; for p in firefox pipewire-pulse wireplumber pipewire; do pkill -KILL -x $p 2>/dev/null; done
+  rm -rf $RUN; chvt 1 2>/dev/null; echo "gui stopped"
+}
+
+case "$1" in
+  start) shift; start "$@";;
+  stop) stop;;
+  status) for p in comp seatd; do pid_alive $RUN/$p.pid && echo "$p: running ($(cat $RUN/$p.pid) $(cat /proc/$(cat $RUN/$p.pid)/comm), $(awk '/VmRSS/{print $2" kB"}' /proc/$(cat $RUN/$p.pid)/status))" || echo "$p: stopped"; done;;
+  log) tail -n ${2:-40} $LOG;;
+  run) shift; [ -f $RUN/display ] || { echo "gui not running"; exit 1; }
+       # join the compositor's private session bus (labwc runs under dbus-run-session)
+       c=$(pgrep -x labwc | head -1)
+       [ -n "$c" ] && export $(tr '\0' '\n' < /proc/$c/environ | grep '^DBUS_SESSION_BUS_ADDRESS=')
+       WAYLAND_DISPLAY=$(cat $RUN/display) "$@" >>$LOG 2>&1 & ;;
+  *) sed -n '2,8p' "$0"; exit 2;;
+esac

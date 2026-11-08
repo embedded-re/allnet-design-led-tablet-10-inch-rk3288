@@ -1,0 +1,18 @@
+### GPU 400000000
+[terrain] <default>: FPS: 13 FrameTime: 80.327 ms
+[refract] <default>: FPS: 26 FrameTime: 38.517 ms
+[effect2d] kernel=1,1,1,1,1;1,1,1,1,1;1,1,1,1,1;: FPS: 84 FrameTime: 11.941 ms
+[desktop] blur-radius=5:effect=blur:passes=1:separable=true:windows=4: FPS: 74 FrameTime: 13.600 ms
+[texture] texture-filter=linear: FPS: 484 FrameTime: 2.067 ms
+[shading] shading=phong: FPS: 260 FrameTime: 3.855 ms
+[bump] bump-render=high-poly: FPS: 213 FrameTime: 4.716 ms
+                                  glmark2 Score: 163 
+### GPU 600000000
+[terrain] <default>: FPS: 18 FrameTime: 57.680 ms
+[refract] <default>: FPS: 32 FrameTime: 31.611 ms
+[effect2d] kernel=1,1,1,1,1;1,1,1,1,1;1,1,1,1,1;: FPS: 124 FrameTime: 8.113 ms
+[desktop] blur-radius=5:effect=blur:passes=1:separable=true:windows=4: FPS: 105 FrameTime: 9.615 ms
+[texture] texture-filter=linear: FPS: 637 FrameTime: 1.571 ms
+[shading] shading=phong: FPS: 345 FrameTime: 2.900 ms
+[bump] bump-render=high-poly: FPS: 257 FrameTime: 3.899 ms
+                                  glmark2 Score: 215 

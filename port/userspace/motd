@@ -1,0 +1,5 @@
+smarttab — RK3288 tablet, Alpine + mainline Linux (notes: HANDOFF.md on the PC)
+  gui start [--rotate 0|90]   Weston desktop (landscape default), gui stop to return to console
+  gui start kiosk -- <app>    single fullscreen app        gui status | gui log
+  btop / htop                 monitor (CPU up to 1.8 GHz, zram swap)
+  Nothing graphical starts at boot. Plug input devices in before `gui start`.

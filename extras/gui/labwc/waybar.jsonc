@@ -1,0 +1,18 @@
+// /etc/xdg/labwc/waybar.jsonc — touch-sized top bar
+{
+  "layer": "top", "position": "top", "height": 40, "spacing": 6,
+  "modules-left": ["custom/apps", "custom/term", "custom/web", "wlr/taskbar"],
+  "modules-right": ["custom/voldown", "custom/vol", "custom/volup", "custom/kbd", "cpu", "temperature", "memory", "clock"],
+  "custom/apps": { "format": "Apps", "on-click": "fuzzel", "tooltip": false },
+  "custom/term": { "format": "Term", "on-click": "foot", "tooltip": false },
+  "custom/web":  { "format": "Web",  "on-click": "firefox", "tooltip": false },
+  "custom/kbd":  { "format": "⌨", "on-click": "pkill -RTMIN -x wvkbd-mobintl", "tooltip": false },
+  "custom/voldown": { "format": "−", "on-click": "vol down", "tooltip": false },
+  "custom/vol": { "exec": "vol-waybar", "interval": 10, "signal": 8, "on-click": "vol mute", "tooltip": false },
+  "custom/volup": { "format": "+", "on-click": "vol up", "tooltip": false },
+  "wlr/taskbar": { "format": "{title:.18}", "on-click": "activate", "on-click-middle": "close", "tooltip": false },
+  "cpu": { "format": "CPU {usage}%", "interval": 2 },
+  "temperature": { "thermal-zone": 0, "format": "{temperatureC}°C", "critical-threshold": 85, "interval": 2 },
+  "memory": { "format": "RAM {used:0.1f}G", "interval": 5 },
+  "clock": { "format": "{:%a %d %b  %H:%M}", "tooltip": false }
+}

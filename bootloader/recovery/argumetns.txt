@@ -1,0 +1,2 @@
+❯ unpack_bootimg --boot_img 08_recovery.img --out unpacked --format=mkbootimg 
+--header_version 0 --os_version 8.1.0 --os_patch_level 2018-12 --kernel unpacked/kernel --ramdisk unpacked/ramdisk --second unpacked/second --pagesize 0x00000800 --base 0x00000000 --kernel_offset 0x10008000 --ramdisk_offset 0x11000000 --second_offset 0x10f00000 --tags_offset 0x10000100 --board '' --cmdline buildvariant=userdebug

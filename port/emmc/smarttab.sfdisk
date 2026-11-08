@@ -1,0 +1,19 @@
+label: gpt
+unit: sectors
+first-lba: 34
+sector-size: 512
+
+# Physical LBAs. 0-33 = GPT, 64.. = idbloader (bootrom), not a partition.
+# p1-p8: vendor boot chain (stock U-Boot reads PARM at LBA 0x2000, ignores GPT). Never touch.
+start=8192,     size=8192,     name=rkparam,    attrs="RequiredPartition"
+start=16384,    size=8192,     name=rkuboot,    attrs="RequiredPartition"
+start=24576,    size=8192,     name=rktrust,    attrs="RequiredPartition"
+start=32768,    size=8192,     name=rkmisc,     attrs="RequiredPartition"
+start=40960,    size=32768,    name=rkresource, attrs="RequiredPartition"
+start=73728,    size=65536,    name=rkkernel,   attrs="RequiredPartition"
+start=139264,   size=65536,    name=uboot-a,    attrs="RequiredPartition"
+start=204800,   size=131072,   name=uboot-b,    attrs="RequiredPartition"
+# Ours
+start=335872,   size=524288,   name=boot
+start=860160,   size=4194304,  name=baremetal
+start=5054464,  size=16777216, name=linux

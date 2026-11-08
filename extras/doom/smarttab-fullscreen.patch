@@ -1,0 +1,21 @@
+diff --git a/doomgeneric/doomgeneric_sdl.c b/doomgeneric/doomgeneric_sdl.c
+index fd4236a..6031177 100644
+--- a/doomgeneric/doomgeneric_sdl.c
++++ b/doomgeneric/doomgeneric_sdl.c
+@@ -137,11 +137,15 @@ void DG_Init(){
+                             SDL_WINDOWPOS_UNDEFINED,
+                             DOOMGENERIC_RESX,
+                             DOOMGENERIC_RESY,
+-                            SDL_WINDOW_SHOWN
++                            SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN_DESKTOP
+                             );
+ 
+   // Setup renderer
+   renderer =  SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED);
++  /* smarttab: scale the 640x400 frame to the 1280x800 panel, keep aspect, crisp pixels */
++  SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "nearest");
++  SDL_RenderSetLogicalSize(renderer, DOOMGENERIC_RESX, DOOMGENERIC_RESY);
++  SDL_ShowCursor(SDL_DISABLE);
+   // Clear winow
+   SDL_RenderClear( renderer );
+   // Render the rect to the screen

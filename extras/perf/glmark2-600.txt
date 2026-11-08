@@ -1,0 +1,73 @@
+600000000
+mon gpu_t=53333 cpu_t=55454 f=600000000
+Warning: DRM_CAP_ASYNC_PAGE_FLIP not supported, falling back to 'mailbox' mode for SwapInterval(0).
+mon gpu_t=56363 cpu_t=58181 f=600000000
+mon gpu_t=60416 cpu_t=59545 f=600000000
+mon gpu_t=61250 cpu_t=61666 f=600000000
+mon gpu_t=59090 cpu_t=59545 f=600000000
+mon gpu_t=59545 cpu_t=62500 f=600000000
+mon gpu_t=61666 cpu_t=61250 f=600000000
+mon gpu_t=60000 cpu_t=62083 f=600000000
+mon gpu_t=63333 cpu_t=61250 f=600000000
+mon gpu_t=65000 cpu_t=64583 f=600000000
+mon gpu_t=64166 cpu_t=65769 f=600000000
+mon gpu_t=66538 cpu_t=66153 f=600000000
+mon gpu_t=60833 cpu_t=66153 f=600000000
+mon gpu_t=58636 cpu_t=63750 f=600000000
+mon gpu_t=59545 cpu_t=62083 f=600000000
+mon gpu_t=64583 cpu_t=65769 f=600000000
+mon gpu_t=61666 cpu_t=62916 f=600000000
+=======================================================
+    glmark2 2023.01
+=======================================================
+    OpenGL Information
+    GL_RENDERER:    Mali-T760 MC4 (Panfrost)
+    GL_VERSION:     OpenGL ES 3.1 Mesa 26.1.6
+    Surface Config: buf=32 r=8 g=8 b=8 a=8 depth=24 stencil=0 samples=0
+    Surface Size:   800x1280 fullscreen
+=======================================================
+[build] use-vbo=false: FPS: 397 FrameTime: 2.523 ms
+[build] use-vbo=true: FPS: 606 FrameTime: 1.652 ms
+[texture] texture-filter=nearest: FPS: 643 FrameTime: 1.556 ms
+[texture] texture-filter=linear: FPS: 641 FrameTime: 1.561 ms
+[texture] texture-filter=mipmap: FPS: 641 FrameTime: 1.562 ms
+[shading] shading=gouraud: FPS: 471 FrameTime: 2.125 ms
+[shading] shading=blinn-phong-inf: FPS: 431 FrameTime: 2.323 ms
+[shading] shading=phong: FPS: 345 FrameTime: 2.904 ms
+[shading] shading=cel: FPS: 330 FrameTime: 3.033 ms
+[bump] bump-render=high-poly: FPS: 257 FrameTime: 3.892 ms
+[bump] bump-render=normals: FPS: 542 FrameTime: 1.847 msmon gpu_t=62916 cpu_t=65000 f=600000000
+mon gpu_t=63333 cpu_t=64166 f=600000000
+mon gpu_t=62916 cpu_t=64166 f=600000000
+mon gpu_t=62916 cpu_t=63333 f=600000000
+mon gpu_t=62916 cpu_t=63750 f=600000000
+mon gpu_t=63750 cpu_t=63750 f=600000000
+
+[bump] bump-render=height: FPS: 513 FrameTime: 1.952 ms
+[effect2d] kernel=0,1,0;1,-4,1;0,1,0;: FPS: 341 FrameTime: 2.935 ms
+[effect2d] kernel=1,1,1,1,1;1,1,1,1,1;1,1,1,1,1;: FPS: 125 FrameTime: 8.060 ms
+[pulsar] light=false:quads=5:texture=false: FPS: 672 FrameTime: 1.488 ms
+[desktop] blur-radius=5:effect=blur:passes=1:separable=true:windows=4: FPS: 105 FrameTime: 9.584 ms
+[desktop] effect=shadow:windows=4: FPS: 408 FrameTime: 2.457 ms
+[buffer] columns=200:interleave=false:update-dispersion=0.9:update-fraction=0.5:update-method=map: FPS: 73 FrameTime: 13.778 ms
+[buffer] columns=200:interleave=false:update-dispersion=0.9:update-fraction=0.5:update-method=subdata: FPS: 73 FrameTime: 13.884 ms
+[buffer] columns=200:interleave=true:update-dispersion=0.9:update-fraction=0.5:update-method=map: FPS: 90 FrameTime: 11.207 ms
+[ideas] speed=duration: FPS: 265 FrameTime: 3.788 ms
+[jellyfish] <default>: FPS: 183 FrameTime: 5.486 ms
+[terrain] <default>: FPS: 18 FrameTime: 57.729 ms
+[shadow] <default>: FPS: 203 FrameTime: 4.949 ms
+[refract] <default>: FPS: 32 FrameTime: 31.619 ms
+[conditionals] fragment-steps=0:vertex-steps=0: FPS: 623 FrameTime: 1.606 ms
+[conditionals] fragment-steps=5:vertex-steps=0: FPS: 294 FrameTime: 3.408 ms
+[conditionals] fragment-steps=0:vertex-steps=5: FPS: 620 FrameTime: 1.615 ms
+[function] fragment-complexity=low:fragment-steps=5: FPS: 404 FrameTime: 2.477 ms
+[function] fragment-complexity=medium:fragment-steps=5: FPS: 243 FrameTime: 4.122 ms
+[loop] fragment-loop=false:fragment-steps=5:vertex-steps=5: FPS: 401 FrameTime: 2.496 ms
+[loop] fragment-steps=5:fragment-uniform=false:vertex-steps=5: FPS: 401 FrameTime: 2.495 ms
+[loop] fragment-steps=5:fragment-uniform=true:vertex-steps=5: FPS: 262 FrameTime: 3.817 ms
+=======================================================
+                                  glmark2 Score: 352 
+=======================================================
+[    4.576691] panfrost ffa30000.gpu: Features: L2:0x07120206 Shader:0x00000000 Tiler:0x00000809 Mem:0x1 MMU:0x00002830 AS:0xff JS:0x7
+[    4.576699] panfrost ffa30000.gpu: shader_present=0xf l2_present=0x1
+[    4.582182] [drm] Initialized panfrost 1.6.0 for ffa30000.gpu on minor 1

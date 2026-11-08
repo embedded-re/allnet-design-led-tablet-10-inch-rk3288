@@ -1,0 +1,12 @@
+mon 65000 1800000 1400000 cool=0
+mon 72916 1800000 1400000 cool=0
+mon 81538 1800000 1400000 cool=0
+mon 87692 1704000 1350000 cool=1
+mon 85000 1200000 1100000 cool=5
+mon 90000 1608000 1350000 cool=2
+mon 90357 1608000 1350000 cool=2
+mon 90714 1416000 1200000 cool=4
+Read from remote host 192.168.1.80: Connection timed out
+client_loop: send disconnect: Broken pipe
+
+[exited with code 0]

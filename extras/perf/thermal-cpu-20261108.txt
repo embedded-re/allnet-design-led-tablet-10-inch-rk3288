@@ -1,0 +1,35 @@
+no gui
+idle: cpu=40909 gpu=38181
+t=10s cpu=54C gpu=45C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=20s cpu=53C gpu=49C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=30s cpu=55C gpu=50C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=40s cpu=57C gpu=52C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=50s cpu=58C gpu=52C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=60s cpu=60C gpu=55C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=70s cpu=62C gpu=57C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=80s cpu=63C gpu=57C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=90s cpu=63C gpu=59C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=101s cpu=66C gpu=59C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=111s cpu=65C gpu=61C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=121s cpu=67C gpu=62C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=131s cpu=69C gpu=62C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=141s cpu=68C gpu=65C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=151s cpu=71C gpu=65C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=161s cpu=71C gpu=65C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=171s cpu=71C gpu=67C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=181s cpu=72C gpu=69C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=191s cpu=75C gpu=68C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=201s cpu=75C gpu=67C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=211s cpu=74C gpu=69C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=221s cpu=76C gpu=70C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=231s cpu=76C gpu=70C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=241s cpu=77C gpu=72C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=252s cpu=77C gpu=72C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=262s cpu=78C gpu=73C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=272s cpu=77C gpu=72C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=282s cpu=77C gpu=75C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=292s cpu=80C gpu=74C f=1800 gpuf=400 cpucool=0 gpucool=0
+t=302s cpu=73C gpu=71C f=1800 gpuf=400 cpucool=0 gpucool=0
+passed: 4: cpu (4)
+failed: 0
+max cpu temp: 80C

@@ -1,0 +1,9 @@
+# /etc/xdg/labwc/autostart — run by labwc at start (sh). GUI_ROTATE comes from `gui`.
+case "${GUI_ROTATE:-90}" in 0) T=normal;; *) T=${GUI_ROTATE};; esac
+# audio first, so it owns hw:0 before any app (PipeWire only lives with the GUI)
+gui-audio &
+wlr-randr --output DSI-1 --transform "$T" >/dev/null 2>&1
+swaybg -c '#203040' >/dev/null 2>&1 &
+waybar -c /etc/xdg/labwc/waybar.jsonc -s /etc/xdg/labwc/waybar.css >/dev/null 2>&1 &
+# on-screen keyboard: starts hidden, the ⌨ button on the bar toggles it (SIGRTMIN)
+wvkbd-mobintl --hidden -L 280 -H 300 >/dev/null 2>&1 &

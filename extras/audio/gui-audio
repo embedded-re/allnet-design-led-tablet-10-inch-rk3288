@@ -1,0 +1,18 @@
+#!/bin/sh
+# gui-audio — start PipeWire + WirePlumber + pipewire-pulse for the GUI session (called from
+# labwc autostart). Verifies the static ES8316 sink exists; retries, logging who held the card.
+LOG=/var/log/gui.log
+for try in 1 2 3 4 5; do
+  pkill -x wireplumber; pkill -x pipewire-pulse; pkill -x pipewire; sleep 0.5
+  pipewire >>$LOG 2>&1 &
+  for i in $(seq 1 20); do [ -S "$XDG_RUNTIME_DIR/pipewire-0" ] && break; sleep 0.2; done
+  wireplumber >/dev/null 2>&1 &
+  pipewire-pulse >>$LOG 2>&1 &
+  sleep 2
+  if wpctl status 2>/dev/null | grep -q "ES8316"; then
+    echo "$(date +%T) gui-audio: ES8316 sink up (try $try)" >>$LOG; exit 0
+  fi
+  echo "$(date +%T) gui-audio: ES8316 sink MISSING (try $try); pcm users: $(fuser /dev/snd/pcmC0D0p 2>&1 | tr -s ' ')" >>$LOG
+  sleep 2
+done
+echo "$(date +%T) gui-audio: giving up — audio goes to Dummy Output" >>$LOG

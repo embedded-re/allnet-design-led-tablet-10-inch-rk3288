@@ -1,0 +1,27 @@
+idle: 48181 mC  freq=1800000
+Avr:      3980   350   1194   4182  |      88501   396   1948   7710
+Tot:             373   1571   5946
+stress-ng: metrc: [1662] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [1662]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [1662] cpu              440841    300.01   1198.52      0.10      1469.41         367.79
+stress-ng: info:  [1662] passed: 4: cpu (4)
+stress-ng: info:  [1662] failed: 0
+stress-ng: info:  [1662] metrics untrustworthy: 0
+stress-ng: info:  [1662] successful run completed in 5 mins
+end: 82307 mC
+126000 141
+216000 872
+312000 8
+408000 6
+600000 7
+696000 5
+816000 3
+1008000 9
+1200000 10
+1416000 7
+1512000 2
+1608000 4
+1704000 3
+1800000 38759
+bursts=45 fails=0 transitions=7737 temp=66923
+[    0.000000] Kernel command line: console=tty1 console=ttyS2,115200n8 earlycon=uart8250,mmio32,0xff690000 loglevel=7 panic=10 oops=panic root=PARTLABEL=linux rootfstype=ext4 rootwait rw

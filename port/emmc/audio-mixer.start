@@ -1,0 +1,12 @@
+#!/bin/sh
+# /etc/local.d/audio-mixer.start — ES8316 defaults (alsactl store fails on this codec's TLV).
+# DAC -> HP mixer -> HPOL/HPOR -> headphone jack + speaker amp (GPIO7_B0 via simple-audio-amplifier)
+# Measured 2026-11-07: the amp hum comes from the codec HP stage -> keep "Headphone" at its
+# minimum (-48 dB) and set loudness with DAC. Speaker is very loud: HP 0 dB + DAC -12 dB hurt;
+# HP 0 dB + DAC -54 dB was just audible; HP -48 dB + DAC -6 dB was too loud at night.
+# Boot muted (DAC 0); raise DAC by hand.
+amixer -c0 -q sset "Left Headphone Mixer Left DAC" on
+amixer -c0 -q sset "Right Headphone Mixer Right DAC" on
+amixer -c0 -q sset "Headphone Mixer" 11  # 11 = 0 dB (valid: 0-4 = -12..-6, 8-11 = -4.5..0; 5-7 RESERVED, old 6 distorted)
+amixer -c0 -q sset Headphone 0
+amixer -c0 -q sset DAC 0

@@ -1,0 +1,64 @@
+idle: 36818 mC  freq=1800000
+mon t=36818 f=1800000 v=1400000 cool=0
+mon t=44090 f=1800000 v=1400000 cool=0
+mon t=47272 f=1800000 v=1400000 cool=0
+mon t=51666 f=1800000 v=1400000 cool=0
+mon t=53750 f=1800000 v=1400000 cool=0
+mon t=51666 f=1800000 v=1400000 cool=0
+mon t=56363 f=1800000 v=1400000 cool=0
+mon t=52916 f=1800000 v=1400000 cool=0
+mon t=55909 f=1800000 v=1400000 cool=0
+mon t=58636 f=1800000 v=1400000 cool=0
+mon t=58636 f=1800000 v=1400000 cool=0
+mon t=56363 f=1800000 v=1400000 cool=0
+mon t=57272 f=1800000 v=1400000 cool=0
+mon t=56363 f=1800000 v=1400000 cool=0
+mon t=60833 f=1800000 v=1400000 cool=0
+mon t=61666 f=1800000 v=1400000 cool=0
+Avr:      3972   349   1195   4175  |      88486   396   1949   7708
+Tot:             372   1572   5941
+mon t=62500 f=1800000 v=1400000 cool=0
+mon t=62916 f=1800000 v=1400000 cool=0
+mon t=64166 f=1800000 v=1400000 cool=0
+mon t=63750 f=1800000 v=1400000 cool=0
+mon t=66153 f=1800000 v=1400000 cool=0
+mon t=65769 f=1800000 v=1400000 cool=0
+mon t=67692 f=1800000 v=1400000 cool=0
+mon t=67307 f=1800000 v=1400000 cool=0
+mon t=68461 f=1800000 v=1400000 cool=0
+mon t=67692 f=1800000 v=1400000 cool=0
+mon t=70000 f=1800000 v=1400000 cool=0
+mon t=68846 f=1800000 v=1400000 cool=0
+mon t=69230 f=1800000 v=1400000 cool=0
+mon t=70833 f=1800000 v=1400000 cool=0
+mon t=72500 f=1800000 v=1400000 cool=0
+mon t=71666 f=1800000 v=1400000 cool=0
+mon t=71250 f=1800000 v=1400000 cool=0
+mon t=73333 f=1800000 v=1400000 cool=0
+mon t=72916 f=1800000 v=1400000 cool=0
+mon t=73333 f=1800000 v=1400000 cool=0
+mon t=72500 f=1800000 v=1400000 cool=0
+mon t=72500 f=1800000 v=1400000 cool=0
+mon t=72083 f=1800000 v=1400000 cool=0
+stress-ng: metrc: [1637] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [1637]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [1637] cpu              172911    120.02    479.46      0.04      1440.71         360.60
+stress-ng: info:  [1637] passed: 4: cpu (4)
+stress-ng: info:  [1637] failed: 0
+stress-ng: info:  [1637] metrics untrustworthy: 0
+stress-ng: info:  [1637] successful run completed in 2 mins
+end: 74583 mC
+126000 1681
+216000 1206
+312000 16
+408000 9
+600000 9
+696000 4
+816000 8
+1008000 12
+1200000 13
+1416000 15
+1512000 4
+1608000 6
+1704000 2
+1800000 21357

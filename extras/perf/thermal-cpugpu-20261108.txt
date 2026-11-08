@@ -1,0 +1,34 @@
+idle: cpu=63333 gpu=62500
+t=10s cpu=81C gpu=77C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=20s cpu=79C gpu=77C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=30s cpu=84C gpu=80C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=40s cpu=84C gpu=80C f=1608 gpuf=600 cpucool=2 gpucool=0
+t=50s cpu=83C gpu=80C f=1704 gpuf=600 cpucool=1 gpucool=0
+t=60s cpu=86C gpu=84C f=1608 gpuf=600 cpucool=2 gpucool=0
+t=70s cpu=87C gpu=83C f=1608 gpuf=600 cpucool=2 gpucool=0
+t=81s cpu=83C gpu=81C f=1608 gpuf=600 cpucool=2 gpucool=0
+t=91s cpu=87C gpu=83C f=1608 gpuf=600 cpucool=2 gpucool=0
+t=101s cpu=87C gpu=84C f=1416 gpuf=600 cpucool=4 gpucool=0
+t=111s cpu=88C gpu=84C f=1416 gpuf=300 cpucool=4 gpucool=2
+t=121s cpu=86C gpu=84C f=1704 gpuf=600 cpucool=1 gpucool=0
+t=131s cpu=85C gpu=84C f=1608 gpuf=200 cpucool=2 gpucool=3
+t=141s cpu=85C gpu=84C f=1200 gpuf=300 cpucool=5 gpucool=2
+t=151s cpu=90C gpu=87C f=1704 gpuf=600 cpucool=2 gpucool=0
+t=161s cpu=87C gpu=84C f=1704 gpuf=300 cpucool=1 gpucool=2
+t=171s cpu=84C gpu=80C f=1008 gpuf=600 cpucool=6 gpucool=0
+t=181s cpu=89C gpu=85C f=1608 gpuf=400 cpucool=2 gpucool=1
+t=192s cpu=85C gpu=85C f=1008 gpuf=600 cpucool=5 gpucool=0
+t=202s cpu=87C gpu=85C f=1512 gpuf=300 cpucool=3 gpucool=2
+t=212s cpu=86C gpu=83C f=1416 gpuf=400 cpucool=4 gpucool=1
+t=222s cpu=90C gpu=87C f=1608 gpuf=400 cpucool=1 gpucool=1
+t=232s cpu=87C gpu=85C f=1200 gpuf=300 cpucool=5 gpucool=2
+t=242s cpu=86C gpu=87C f=1704 gpuf=400 cpucool=1 gpucool=2
+t=252s cpu=87C gpu=83C f=1416 gpuf=600 cpucool=3 gpucool=0
+t=262s cpu=90C gpu=84C f=1416 gpuf=300 cpucool=4 gpucool=2
+t=272s cpu=86C gpu=85C f=1416 gpuf=300 cpucool=4 gpucool=2
+t=282s cpu=89C gpu=87C f=1512 gpuf=400 cpucool=3 gpucool=1
+t=292s cpu=88C gpu=84C f=1608 gpuf=300 cpucool=2 gpucool=2
+t=303s cpu=84C gpu=84C f=1704 gpuf=300 cpucool=1 gpucool=2
+passed: 4: cpu (4)
+failed: 0
+max cpu temp: 90C

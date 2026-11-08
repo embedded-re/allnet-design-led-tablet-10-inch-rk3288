@@ -1,0 +1,36 @@
+power_allocator
+idle: cpu=45000 gpu=44090
+t=10s cpu=63C gpu=58C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=20s cpu=60C gpu=58C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=30s cpu=65C gpu=63C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=40s cpu=69C gpu=64C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=50s cpu=69C gpu=66C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=61s cpu=73C gpu=70C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=71s cpu=75C gpu=70C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=81s cpu=75C gpu=70C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=91s cpu=79C gpu=74C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=101s cpu=80C gpu=75C f=1800 gpuf=100 cpucool=0 gpucool=4
+t=111s cpu=82C gpu=75C f=1800 gpuf=600 cpucool=0 gpucool=0
+t=121s cpu=80C gpu=76C f=1800 gpuf=600 cpucool=0 gpucool=4
+t=131s cpu=81C gpu=78C f=1800 gpuf=100 cpucool=0 gpucool=0
+t=141s cpu=84C gpu=80C f=1800 gpuf=100 cpucool=0 gpucool=4
+t=151s cpu=84C gpu=81C f=1800 gpuf=100 cpucool=0 gpucool=4
+t=162s cpu=85C gpu=81C f=1704 gpuf=100 cpucool=0 gpucool=1
+t=172s cpu=86C gpu=80C f=1608 gpuf=100 cpucool=2 gpucool=4
+t=182s cpu=85C gpu=79C f=1608 gpuf=100 cpucool=2 gpucool=4
+t=192s cpu=84C gpu=81C f=1800 gpuf=100 cpucool=0 gpucool=4
+t=202s cpu=83C gpu=83C f=1800 gpuf=100 cpucool=0 gpucool=4
+t=212s cpu=83C gpu=80C f=1800 gpuf=100 cpucool=0 gpucool=4
+t=222s cpu=83C gpu=81C f=1800 gpuf=100 cpucool=0 gpucool=4
+t=232s cpu=86C gpu=81C f=1416 gpuf=100 cpucool=4 gpucool=4
+t=242s cpu=83C gpu=80C f=1704 gpuf=200 cpucool=1 gpucool=3
+t=252s cpu=86C gpu=80C f=1608 gpuf=100 cpucool=2 gpucool=4
+t=262s cpu=83C gpu=81C f=1512 gpuf=100 cpucool=7 gpucool=4
+t=273s cpu=84C gpu=82C f=1800 gpuf=100 cpucool=0 gpucool=4
+t=283s cpu=85C gpu=81C f=1512 gpuf=100 cpucool=3 gpucool=4
+t=293s cpu=84C gpu=80C f=1512 gpuf=100 cpucool=0 gpucool=3
+t=303s cpu=80C gpu=79C f=1800 gpuf=600 cpucool=0 gpucool=0
+stress-ng: metrc: [1498] cpu              387509    300.02   1132.39      1.32      1291.63         341.81
+passed: 4: cpu (4)
+failed: 0
+max cpu temp: 86C  avg cpu freq: 1712 MHz  avg gpu freq: 343 MHz  policy: power_allocator

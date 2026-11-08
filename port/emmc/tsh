@@ -1,0 +1,5 @@
+#!/bin/sh
+# ssh into the tablet; IP = last "rcS: up" in the serial log unless TABLET_IP is set
+ip=${TABLET_IP:-$(grep -a "rcS: up" ~/kstb-serial.log 2>/dev/null | tail -1 | sed "s/.*IP: \([0-9.]*\).*/\1/")}
+ip=${ip:-192.168.1.80}   # fixed MAC 02:53:54:32:88:01 -> normally this lease
+exec ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=5 root@"$ip" "$@"

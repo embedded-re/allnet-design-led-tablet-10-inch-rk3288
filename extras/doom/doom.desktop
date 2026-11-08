@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Doom
+Comment=Doom (shareware episode 1, doomgeneric/SDL2)
+Exec=doom
+Icon=applications-games
+Terminal=false
+Categories=Game;

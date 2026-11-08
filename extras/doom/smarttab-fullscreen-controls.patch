@@ -1,0 +1,110 @@
+diff --git a/doomgeneric/doomgeneric_sdl.c b/doomgeneric/doomgeneric_sdl.c
+index fd4236a..09979fd 100644
+--- a/doomgeneric/doomgeneric_sdl.c
++++ b/doomgeneric/doomgeneric_sdl.c
+@@ -3,6 +3,7 @@
+ #include "doomkeys.h"
+ #include "m_argv.h"
+ #include "doomgeneric.h"
++#include "d_event.h"
+ 
+ #include <stdio.h>
+ #include <unistd.h>
+@@ -41,11 +42,26 @@ static unsigned char convertToDoomKey(unsigned int key){
+     case SDLK_DOWN:
+       key = KEY_DOWNARROW;
+       break;
++    /* smarttab: WASD + E/Space use + Ctrl/F fire (arrows keep turning) */
++    case SDLK_w:
++      key = KEY_UPARROW;
++      break;
++    case SDLK_s:
++      key = KEY_DOWNARROW;
++      break;
++    case SDLK_a:
++      key = KEY_STRAFE_L;
++      break;
++    case SDLK_d:
++      key = KEY_STRAFE_R;
++      break;
+     case SDLK_LCTRL:
+     case SDLK_RCTRL:
++    case SDLK_f:
+       key = KEY_FIRE;
+       break;
+     case SDLK_SPACE:
++    case SDLK_e:
+       key = KEY_USE;
+       break;
+     case SDLK_LSHIFT:
+@@ -110,9 +126,36 @@ static void addKeyToQueue(int pressed, unsigned int keyCode){
+   s_KeyQueueWriteIndex++;
+   s_KeyQueueWriteIndex %= KEYQUEUE_SIZE;
+ }
++static void addDoomKeyToQueue(int pressed, unsigned char key){
++  s_KeyQueue[s_KeyQueueWriteIndex] = (pressed << 8) | key;
++  s_KeyQueueWriteIndex++;
++  s_KeyQueueWriteIndex %= KEYQUEUE_SIZE;
++}
++
++/* smarttab: mouse look — x motion turns, left = fire, middle = forward, right = use */
++static int s_MouseButtons = 0;
++
+ static void handleKeyInput(){
+   SDL_Event e;
++  int mouse_dx = 0, mouse_changed = 0;
+   while (SDL_PollEvent(&e)){
++    if (e.type == SDL_MOUSEMOTION) {
++      mouse_dx += e.motion.xrel;
++      mouse_changed = 1;
++      continue;
++    }
++    if (e.type == SDL_MOUSEBUTTONDOWN || e.type == SDL_MOUSEBUTTONUP) {
++      int down = (e.type == SDL_MOUSEBUTTONDOWN);
++      if (e.button.button == SDL_BUTTON_RIGHT) {
++        addDoomKeyToQueue(down, KEY_USE);
++      } else {
++        int bit = (e.button.button == SDL_BUTTON_LEFT) ? 1 :
++                  (e.button.button == SDL_BUTTON_MIDDLE) ? 4 : 0;
++        if (down) s_MouseButtons |= bit; else s_MouseButtons &= ~bit;
++        mouse_changed = 1;
++      }
++      continue;
++    }
+     if (e.type == SDL_QUIT){
+       puts("Quit requested");
+       atexit(SDL_Quit);
+@@ -128,6 +171,15 @@ static void handleKeyInput(){
+       addKeyToQueue(0, e.key.keysym.sym);
+     }
+   }
++  if (mouse_changed) {
++    event_t ev;
++    ev.type = ev_mouse;
++    ev.data1 = s_MouseButtons;
++    ev.data2 = mouse_dx * 4;   /* turn speed; menu "mouse sensitivity" scales further */
++    ev.data3 = 0;              /* no forward/back from vertical mouse motion */
++    ev.data4 = 0;
++    D_PostEvent(&ev);
++  }
+ }
+ 
+ 
+@@ -137,11 +189,16 @@ void DG_Init(){
+                             SDL_WINDOWPOS_UNDEFINED,
+                             DOOMGENERIC_RESX,
+                             DOOMGENERIC_RESY,
+-                            SDL_WINDOW_SHOWN
++                            SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN_DESKTOP
+                             );
+ 
+   // Setup renderer
+   renderer =  SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED);
++  /* smarttab: scale the 640x400 frame to the 1280x800 panel, keep aspect, crisp pixels */
++  SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "nearest");
++  SDL_RenderSetLogicalSize(renderer, DOOMGENERIC_RESX, DOOMGENERIC_RESY);
++  SDL_ShowCursor(SDL_DISABLE);
++  SDL_SetRelativeMouseMode(SDL_TRUE);
+   // Clear winow
+   SDL_RenderClear( renderer );
+   // Render the rect to the screen

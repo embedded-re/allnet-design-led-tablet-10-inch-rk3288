@@ -1,0 +1,55 @@
+# Whitelist at top level: only these folders/files are part of the repo.
+# Everything else here (eMMC dump, Ghidra project, upstream linux/ and u-boot/
+# trees, tftp/ runtime dir, private notes) stays local.
+/*
+!/.gitignore
+!/README.md
+!/docs/
+!/images/
+!/hardware/
+!/bootloader/
+!/port/
+!/extras/
+
+# Never commit binaries, images, builds, or manual snapshot copies.
+*.img
+*.bin
+*.dtb
+*.raw
+*.cpio
+*.cpio.gz
+*.tar.gz
+*.apk
+*.wad
+*.mjpg
+*.log
+*.scr
+*.orig
+*.pre-*
+*.prev
+zImage*
+Image
+
+# vendor material: proprietary blobs and unpacked images
+/hardware/firmware/
+/hardware/vendor/recovery/
+/hardware/vendor/boot/*
+!/hardware/vendor/boot/board.dts
+!/hardware/vendor/boot/kernel.config
+/bootloader/recovery/unpacked/
+/bootloader/recovery/second_new
+/bootloader/stock-uboot/
+
+# local build/download dirs and per-variant leftovers
+/port/rootfs/root/
+/port/rootfs/dl/
+/port/rootfs/apktools/
+/port/emmc/camera/
+/port/emmc/*.dtb.*
+/port/emmc/*.config.*
+/port/emmc/boot-emmc.cmd.*
+/extras/perf/linux.config.*
+/extras/perf/rk3288-smarttab.dtb.*
+/extras/perf/rk3288-smarttab.dts.*
+/extras/splash/*.with-video
+/extras/splash/logo-*x*.bmp

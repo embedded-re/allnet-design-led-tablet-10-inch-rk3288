@@ -1,0 +1,12 @@
+[Unit]
+Description=TFTP server for the RK3288 SmartTab (U-Boot fetches boot.scr/zImage/dtb)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/dnsmasq --keep-in-foreground --port=0 --enable-tftp --tftp-root=/home/arch/projects/RE/RockChipTablet/tftp --user=arch --group=arch --listen-address=192.168.1.38 --bind-interfaces --log-facility=-
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

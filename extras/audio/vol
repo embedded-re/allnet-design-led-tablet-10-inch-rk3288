@@ -1,0 +1,24 @@
+#!/bin/sh
+# vol — tablet volume (ES8316 DAC only; Headphone stage stays at its -48 dB minimum, no hum).
+#   vol up | down | mute | get        6 dB steps, first step from mute = -60 dB, hard cap 0 dB (DAC full scale).
+# Safety protocol: boot is muted; volume only rises one step per command; never above DAC 0 dB
+# Gain staging (2026-11-08): Headphone stage -48 dB (no hum), Headphone Mixer 11 = 0 dB (was RESERVED 6 -> distortion).
+STEP=12; MIN=72; MAX=192          # DAC units: 0.5 dB each, 192 = 0 dB -> 72 = -60 dB, 192 = 0 dB (cap)
+LAST=/run/vol.last
+cur(){ amixer -c0 sget DAC | sed -n 's/.*Front Left: Playback \([0-9]*\).*/\1/p'; }
+set_dac(){ amixer -c0 -q sset DAC "$1"; }
+db(){ [ "$1" -eq 0 ] && echo muted || echo "$(( ($1 - 192) / 2 )) dB"; }
+notify(){ pkill -RTMIN+8 -x waybar 2>/dev/null; true; }
+v=$(cur)
+case "$1" in
+  up)   if [ "$v" -eq 0 ]; then n=$MIN; else n=$((v + STEP)); [ $n -gt $MAX ] && n=$MAX; fi
+        set_dac $n; echo $n > $LAST;;
+  down) if [ "$v" -le $MIN ]; then n=0; else n=$((v - STEP)); fi
+        set_dac $n; [ $n -gt 0 ] && echo $n > $LAST;;
+  mute) if [ "$v" -gt 0 ]; then echo $v > $LAST; set_dac 0
+        else n=$(cat $LAST 2>/dev/null || echo $MIN); [ $n -gt $MAX ] && n=$MAX; set_dac $n; fi;;
+  get|"") ;;
+  *) sed -n '2,3p' "$0"; exit 2;;
+esac
+[ "$1" = get ] || [ -z "$1" ] || notify
+v=$(cur); [ "$1" = waybar ] || echo "$(db $v)"

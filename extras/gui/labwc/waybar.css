@@ -1,0 +1,11 @@
+* { font-family: "DejaVu Sans"; font-size: 15px; border: none; border-radius: 0; min-height: 0; }
+window#waybar { background: #15202b; color: #e6e6e6; }
+#custom-apps, #custom-term, #custom-web, #custom-kbd, #custom-voldown, #custom-volup {
+  background: #2d4a63; color: #ffffff; padding: 0 16px; margin: 4px 0 4px 4px; border-radius: 6px; }
+#custom-apps { background: #3b6e9c; }
+#taskbar button { color: #cfd8dc; padding: 0 10px; margin: 4px 2px; border-radius: 6px; }
+#taskbar button.active { background: #3b4f63; color: #ffffff; }
+#cpu, #temperature, #memory, #clock { padding: 0 10px; }
+#temperature.critical { color: #ff6b6b; }
+#custom-vol { padding: 0 8px; min-width: 80px; }
+#custom-voldown, #custom-volup { padding: 0 18px; font-weight: bold; }
